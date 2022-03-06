@@ -3,8 +3,11 @@
 import React from "react";
 // import { FaWindows } from "react-icons/fa";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [userdata, setUserData] = React.useState({
     username: "",
     password: "",
@@ -17,7 +20,10 @@ const Login = () => {
       body: JSON.stringify(userdata),
       credentials: "include",
     })
-      .then((res) => res.json())
+      .then((res) => {
+        navigate("/");
+        return res.json();
+      })
       .then((data) => {
         if (data.message) {
           alert(data.message);
