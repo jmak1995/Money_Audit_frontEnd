@@ -7,7 +7,6 @@ function Home() {
   const [user, setUser] = useState(" ");
   const [transactions, setTransactions] = useState([]);
   const navigate = useNavigate();
-  console.log(user, transactions);
   useEffect(() => {
     fetch("http://localhost:4000/", {
       method: "GET",
@@ -36,15 +35,28 @@ function Home() {
       <h1>Welcome {user}</h1>
       <div className="highlighted">
         Latest Transactions
-        {transactions.map((t) => {
-          return (
-            <div className="t_list">
-              <h4>{t.amount}</h4>
-              <h4>{t.transaction_type}</h4>
-              <h4>{t.transcation_date}</h4>
-            </div>
-          );
-        })}
+        <div className="container">
+          <div className="t_list1">
+            <h4>amount</h4>
+            <h4>type</h4>
+            <h4>date</h4>
+          </div>
+          {transactions.map((t) => {
+            return (
+              <div className="t_list">
+                <h4>{t.amount}</h4>
+                <h4>{t.transaction_type}</h4>
+                <h4>{new Date(t.transcation_date).toDateString()}</h4>
+              </div>
+            );
+          })}
+          <button
+            onClick={() => (window.location.href = "/addInfo")}
+            value="click here"
+          >
+            AddTransaction
+          </button>
+        </div>
       </div>
     </div>
   );
