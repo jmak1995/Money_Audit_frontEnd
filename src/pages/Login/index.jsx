@@ -36,9 +36,13 @@ const Login = () => {
     setUserData({ ...userdata, [key]: e });
   };
   return (
-    <div className="form">
-      <div className="imgcontainer">
-        <img src="icon.png" alt="Avatar" className="avatar" />
+    <div className="form2">
+      <div className="imageContainer">
+        <img
+          src="https://images.cointelegraph.com/images/1434_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjItMDMvODA5MjczZTYtY2YzMi00ODFjLWI0NDYtYmM0YjgyODIzMjgzLmpwZw==.jpg"
+          alt="avatar1"
+          className="avatar1"
+        />
       </div>
       <div className="loginContainer">
         <label for="Username">

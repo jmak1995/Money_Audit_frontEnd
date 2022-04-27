@@ -25,10 +25,15 @@ const Signup = () => {
   const onChange = (e, key) => {
     setUserData({ ...userdata, [key]: e });
   };
+
   return (
-    <div className="form">
+    <div className="form1">
       <div className="imgcontainer">
-        <img src="icon.png" alt="Avatar" className="avatar" />
+        <img
+          src="https://cdn4.iconfinder.com/data/icons/man-user-human-profile-person-business-avatar/100/13-1User_5-4-512.png"
+          className="avatar"
+          alt=""
+        />
       </div>
       <div className="loginContainer">
         <label for="Username">
@@ -56,10 +61,19 @@ const Signup = () => {
         <button className="button" onClick={signupHandler}>
           signup
         </button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember" required />{" "}
-          Agree to Terms of Use
-        </label>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              checked="checked"
+              name="remember"
+              required
+              onChange={() => {}}
+              defaultChecked
+            />{" "}
+            Agree to Terms of Use
+          </label>
+        </div>
       </div>
     </div>
   );

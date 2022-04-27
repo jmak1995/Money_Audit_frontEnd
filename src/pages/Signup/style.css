@@ -1,22 +1,30 @@
-.form {
-  border: 1.5px solid #f1f1f1;
-  height: 300px;
-  width: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  left: 5px;
-  box-sizing: border-box;
-  margin: auto;
-  position: absolute;
-  top: 5px;
+.navigation {
+  height: 10%;
+  width: 60%;
 }
 
+.form1 {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 30%;
+  margin: 10%;
+  background: url("https://d1e00ek4ebabms.cloudfront.net/production/6b7c5fa6-b824-4430-b544-2102ad555fd1.jpg");
+  background-color: lightblue;
+}
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Full-width inputs */
 input[type="text"],
 input[type="password"] {
-  width: 100%;
+  width: 40%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 10px;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -27,34 +35,21 @@ input[type="password"] {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
-  border: none;
   cursor: pointer;
-  width: 100%;
+  width: 20%;
+  align-self: center;
 }
 
 .button:hover {
   opacity: 0.8;
 }
 
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
 /* Center the avatar image inside this container */
 .imgcontainer {
-  align-items: center;
-  margin: 12px 0 12px 0;
-}
-
-/* Avatar image */
-img.avatar {
-  flex-wrap: wrap;
+  height: 80px;
+  width: 80px;
   display: flex;
-  margin-left: 0%;
-  margin-block: -63px;
+  align-self: center;
 }
 
 /* Add padding to containers */
@@ -66,15 +61,4 @@ img.avatar {
 span.psw {
   float: right;
   padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
 }

@@ -1,7 +1,11 @@
 import "./style.css";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, navigate } from "react-router-dom";
+
+function Logout() {
+  Response.Cookies.Clear();
+}
 
 function AddInfo() {
   const navigate = useNavigate();
