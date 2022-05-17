@@ -2,11 +2,13 @@ import "./style.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import LogoutButton from "../../components/logout";
 
 function Home() {
   const [user, setUser] = useState(" ");
   const [transactions, setTransactions] = useState([]);
   const navigate = useNavigate();
+
   useEffect(() => {
     fetch("http://localhost:4000/", {
       method: "GET",
@@ -33,31 +35,31 @@ function Home() {
   return (
     <div className="home">
       <h1>Welcome {user}</h1>
-      <div className="highlighted">
-        Latest Transactions
-        <div className="container">
-          <div className="t_list1">
-            <h4>amount</h4>
-            <h4>type</h4>
-            <h4>date</h4>
-          </div>
+      <table className="container">
+        <thead className="t_list1">
+          <td>amount</td>
+          <td>type</td>
+          <td>date</td>
+        </thead>
+        <tbody>
           {transactions.map((t) => {
             return (
-              <div className="t_list">
-                <h4>{t.amount}</h4>
-                <h4>{t.transaction_type}</h4>
-                <h4>{new Date(t.transcation_date).toDateString()}</h4>
-              </div>
+              <tr className="t_list">
+                <td>{t.amount}</td>
+                <td>{t.transaction_type}</td>
+                <td>{new Date(t.transcation_date).toDateString()}</td>
+              </tr>
             );
           })}
-          <button
-            onClick={() => (window.location.href = "/addInfo")}
-            value="click here"
-          >
-            AddTransaction
-          </button>
-        </div>
-      </div>
+        </tbody>
+      </table>
+      <button
+        onClick={() => (window.location.href = "/addInfo")}
+        value="click here"
+      >
+        AddTransaction
+      </button>
+      <LogoutButton />
     </div>
   );
 }

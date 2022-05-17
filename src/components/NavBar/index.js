@@ -23,7 +23,7 @@ const navBar = () => {
             Login
           </NavLink>
           <NavLink to="/addInfo" activeStyle>
-            AddTransaction
+            Add transaction
           </NavLink>
           <NavLink to="/signup" activeStyle>
             Sign Up

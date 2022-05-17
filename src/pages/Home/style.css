@@ -1,28 +1,31 @@
-.t_list {
-  display: flex;
-  justify-content: space-between;
-  width: 450px;
-  margin-left: 15px;
-  margin-right: 15px;
+.home {
+  font-weight: 200;
+  align-content: center;
 }
 
-.t_list1 {
-  display: flex;
-  justify-content: space-between;
-  width: 380px;
-  margin-left: 15px;
-  margin-right: 15px;
+table {
+  background-image: url("https://thumbs.dreamstime.com/z/bitcoin-virtual-money-banknotes-us-dollar-next-to-mobile-phone-btc-vs-usd-stock-exchange-cryptocurrency-coins-background-176398175.jpg");
+  height: fit-content;
+  width: max-content;
+  border: black;
+  border-top-width: 2%;
+  align-self: center;
+  border: black;
+  border-radius: 10%;
+  background-blend-mode: saturation;
+  color: aqua;
 }
 
-.container {
-  position: absolute;
-  width: 500px;
-  height: relative;
-  left: 269px;
-  top: 100px;
+.thead {
+  display: flex;
+  border-width: 10px;
+  border: black;
+}
 
-  background: #ffffff;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 20px;
+button {
+  align-self: center;
+}
+table.container {
+  height: max-content + 90px;
+  max-width: 60%;
 }
